@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel Plant Data Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .form-control {
+            margin-bottom: 20px;
+        }
+        .form-header {
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="form-header text-center">Steel Plant Data Form</h1>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="cb_flow" class="form-label">CB_FLOW:</label>
+                <input type="number" class="form-control" id="cb_flow" name="cb_flow" required>
+            </div>
+            <div class="form-group">
+                <label for="cb_press" class="form-label">CB_PRESS:</label>
+                <input type="number" class="form-control" id="cb_press" name="cb_press" required>
+            </div>
+            <div class="form-group">
+                <label for="cb_temp" class="form-label">CB_TEMP:</label>
+                <input type="number" class="form-control" id="cb_temp" name="cb_temp" required>
+            </div>
+            <div class="form-group">
+                <label for="steam_flow" class="form-label">STEAM_FLOW:</label>
+                <input type="number" class="form-control" id="steam_flow" name="steam_flow" required>
+            </div>
+            <div class="form-group">
+                <label for="steam_temp" class="form-label">STEAM_TEMP:</label>
+                <input type="number" class="form-control" id="steam_temp" name="steam_temp" required>
+            </div>
+            <div class="form-group">
+                <label for="steam_press" class="form-label">STEAM_PRESS:</label>
+                <input type="number" class="form-control" id="steam_press" name="steam_press" required>
+            </div>
+            <div class="form-group">
+                <label for="o2_press" class="form-label">O2_PRESS:</label>
+                <input type="number" class="form-control" id="o2_press" name="o2_press" required>
+            </div>
+            <div class="form-group">
+                <label for="o2_flow" class="form-label">O2_FLOW:</label>
+                <input type="number" class="form-control" id="o2_flow" name="o2_flow" required>
+            </div>
+            <div class="form-group">
+                <label for="o2_per" class="form-label">O2_PER:</label>
+                <input type="number" class="form-control" id="o2_per" name="o2_per" required>
+            </div>
+            <div class="form-group">
+                <label for="pci" class="form-label">PCI:</label>
+                <input type="number" class="form-control" id="pci" name="pci" required>
+            </div>
+            <div class="form-group">
+                <label for="atm_humid" class="form-label">ATM_HUMID:</label>
+                <input type="number" class="form-control" id="atm_humid" name="atm_humid" required>
+            </div>
+            <div class="form-group">
+                <label for="hb_temp" class="form-label">HB_TEMP:</label>
+                <input type="number" class="form-control" id="hb_temp" name="hb_temp" required>
+            </div>
+            <div class="form-group">
+                <label for="hb_press" class="form-label">HB_PRESS:</label>
+                <input type="number" class="form-control" id="hb_press" name="hb_press" required>
+            </div>
+            <div class="form-group">
+                <label for="top_press" class="form-label">TOP_PRESS:</label>
+                <input type="number" class="form-control" id="top_press" name="top_press" required>
+            </div>
+            <div class="form-group">
+                <label for="top_temp1" class="form-label">TOP_TEMP1:</label>
+                <input type="number" class="form-control" id="top_temp1" name="top_temp1" required>
+            </div>
+            <div class="form-group">
+                <label for="top_temp2" class="form-label">TOP_TEMP2:</label>
+                <input type="number" class="form-control" id="top_temp2" name="top_temp2" required>
+            </div>
+            <div class="form-group">
+                <label for="top_temp3" class="form-label">TOP_TEMP3:</label>
+                <input type="number" class="form-control" id="top_temp3" name="top_temp3" required>
+            </div>
+            <div class="form-group">
+                <label for="top_temp4" class="form-label">TOP_TEMP4:</label>
+                <input type="number" class="form-control" id="top_temp4" name="top_temp4" required>
+            </div>
+            <div class="form-group">
+                <label for="top_spray" class="form-label">TOP_SPRAY:</label>
+                <input type="number" class="form-control" id="top_spray" name="top_spray" required>
+            </div>
+            <div class="form-group">
+                <label for="top_temp" class="form-label">TOP_TEMP:</label>
+                <input type="number" class="form-control" id="top_temp" name="top_temp" required>
+            </div>
+            <div class="form-group">
+                <label for="top_press_1" class="form-label">TOP_PRESS_1:</label>
+                <input type="number" class="form-control" id="top_press_1" name="top_press_1" required>
+            </div>
+            <div class="form-group">
+                <label for="co" class="form-label">CO:</label>
+                <input type="number" class="form-control" id="co" name="co" required>
+            </div>
+            <div class="form-group">
+                <label for="co2" class="form-label">CO2:</label>
+                <input type="number" class="form-control" id="co2" name="co2" required>
+            </div>
+            <div class="form-group">
+                <label for="h2" class="form-label">H2:</label>
+                <input type="number" class="form-control" id="h2" name="h2" required>
+            </div>
+            <button type="submit" class="btn btn-custom">Predict</button>
+        </form>
+        {% if output %}
+            <div class="result alert alert-success">
+                Prediction: {{ output }}
+            </div>
+        {% endif %}
+        {% if error %}
+            <div class="result alert alert-danger">
+                Error: {{ error }}
+            </div>
+        {% endif %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
